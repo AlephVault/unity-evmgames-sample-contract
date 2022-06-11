@@ -1,0 +1,35 @@
+{
+  "name": "unity-evmgames-sample-contract",
+  "version": "0.0.1",
+  "description": "This is a Truffle project containing a sample contract (ERC-20) and configuring its \"develop\" node to listen in all the available IP addresses.",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "develop": "truffle develop",
+    "migrate": "truffle migrate",
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlephVault/unity-evmgames-sample-contract.git"
+  },
+  "keywords": [
+    "truffle",
+    "sample",
+    "contract",
+    "evmgames",
+    "unity"
+  ],
+  "author": "Luis Masuelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlephVault/unity-evmgames-sample-contract/issues"
+  },
+  "homepage": "https://github.com/AlephVault/unity-evmgames-sample-contract#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@truffle/hdwallet-provider": "^2.0.0"
+  }
+}
