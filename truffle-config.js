@@ -20,7 +20,9 @@
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const fs = require('fs');
+// Get your own endpoint (e.g. chainstack, infura) and mnemonics.
 const mnemonic = fs.readFileSync(".secret").toString().trim();
+const endpoint = fs.readFileSync(".endpoint").toString().trim();
 
 module.exports = {
   /**
@@ -57,9 +59,7 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     mumbai: {
-       provider: () => new HDWalletProvider(
-           mnemonic, `https://polygon-mumbai.infura.io/v3/7fb671486f01497a83173e00e8efeb79`
-       ),
+       provider: () => new HDWalletProvider(mnemonic, endpoint),
        network_id: 80001,
        // gas: 5500000,        // Ropsten has a lower block limit than mainnet
        // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
